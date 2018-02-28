@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>가입</title>
+</head>
+<body>
+<h2>가입</h2>
+<form th:object="${formData}" method="POST">
+    <p>
+        <label>이메일:<br>
+            <input type="text" th:field="*{email}" />
+            <span th:each="err : ${#fields.errors('email')}" th:text="${err}" />
+        </label>
+    </p>
+    <p>
+        <label>이름:<br>
+            <input type="text" th:field="*{name}" />
+            <span th:each="err : ${#fields.errors('name')}" th:text="${err}" />
+        </label>
+    </p>
+    <p>
+        <label>암호:<br>
+            <input type="password" th:field="*{password}" />
+            <span th:each="err : ${#fields.errors('password')}" th:text="${err}" />
+        </label>
+    </p>
+    <p>
+        <label>생일:<br>
+            <input type="text" th:field="*{birthday}" />
+            <span th:each="err : ${#fields.errors('birthday')}" th:text="${err}" />
+        </label>
+    </p>
+    <input type="submit" value="가입">
+</form>
+</body>
+</html>

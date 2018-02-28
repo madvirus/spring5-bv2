@@ -1,3 +1,7 @@
 target
+!.mvn/wrapper/maven-wrapper.jar
 *.iml
 .idea
+.settings
+.classpath
+.project

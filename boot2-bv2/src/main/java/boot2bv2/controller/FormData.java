@@ -1,9 +1,11 @@
-package controller;
+package boot2bv2.controller;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.*;
-import java.math.BigDecimal;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
 
 public class FormData {
@@ -17,9 +19,6 @@ public class FormData {
     @DateTimeFormat(pattern = "yyyyMMdd")
     @PastOrPresent
     private LocalDate birthday;
-
-    @Digits(integer = 3, fraction = 1)
-    private BigDecimal height;
 
     public String getEmail() {
         return email;
@@ -51,13 +50,5 @@ public class FormData {
 
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
-    }
-
-    public BigDecimal getHeight() {
-        return height;
-    }
-
-    public void setHeight(BigDecimal height) {
-        this.height = height;
     }
 }

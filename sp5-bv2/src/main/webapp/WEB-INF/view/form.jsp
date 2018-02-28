@@ -26,6 +26,18 @@
         <form:errors path="password"/>
         </label>
     </p>
+    <p>
+        <label>생일:<br>
+        <form:input path="birthday" />
+        <form:errors path="birthday" />
+        </label>
+    </p>
+    <p>
+        <label>키:<br>
+        <form:input path="height" />
+        <form:errors path="height" />
+        </label>
+    </p>
     <input type="submit" value="가입">
     </form:form>
 </body>

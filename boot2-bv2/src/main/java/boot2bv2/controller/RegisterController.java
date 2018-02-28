@@ -1,4 +1,4 @@
-package controller;
+package boot2bv2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -23,8 +23,8 @@ public class RegisterController {
 
     @PostMapping
     public String submit(@ModelAttribute @Valid FormData formData, Errors errors) {
+        System.out.println("-----------------------------");
         if (errors.hasErrors()) return "form";
         return "submit";
     }
-
 }
